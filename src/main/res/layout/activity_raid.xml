@@ -1,0 +1,1614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#1E2020"
+    tools:context="a61699.brandon.kelley.rustcalculator.Raid"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/raidBack"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="4dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/rust"
+                android:onClick="backToHomeFromRaid"
+                android:text="Back"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/raidClear"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="0dp"
+                android:layout_weight="2"
+                android:fontFamily="@font/rust"
+                android:onClick="restartRaid"
+                android:text="Clear"
+                android:textSize="16sp" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_weight="4"
+                android:fontFamily="@font/rust"
+                android:text="Raid"
+                android:textColor="#CE422B"
+                android:textSize="64sp"
+
+                />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/calculateRaidButton"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginRight="18dp"
+            android:fontFamily="@font/rust"
+            android:onClick="calculateCost"
+            android:text="Calculate"
+            android:textSize="24sp" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:hint="1"
+                android:textSize="50sp"
+                android:textColorHint="#CE422B"
+                android:textColor="#CE422B"
+                android:id="@+id/sheetMetalDoor_editText"
+                android:inputType="number"
+                />
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/sheet_metal_door_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="4"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/sheetMetalDoor_Satchel"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/satchel_charge_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="1920"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/sheetMetalDoor_Satchel_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="2880"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/sheetMetalDoor_Satchel_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="2"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/sheetMetalDoor_Rocket"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/rocket_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="2800"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/sheetMetalDoor_Rocket_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="3900"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/sheetMetalDoor_Rocket_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="1"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/sheetMetalDoor_C4"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/c4_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="2200"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/sheetMetalDoor_C4_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="3000"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/sheetMetalDoor_C4_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:hint="1"
+                android:textSize="50sp"
+                android:textColorHint="#CE422B"
+                android:textColor="#CE422B"
+                android:id="@+id/armoredDoor_editText"
+                android:inputType="number"
+                />
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/armored_door" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="12"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/armored_door_Satchel"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/satchel_charge_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="5760"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/armored_door_Satchel_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="8640"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/armored_door_Satchel_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="4"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/armored_door_Rocket"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/rocket_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="5600"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/armored_door_Rocket_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="7800"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/armored_door_Rocket_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="2"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/armored_door_C4"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/c4_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="4400"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/armored_door_C4_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="6000"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/armored_door_C4_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:hint="1"
+                android:textSize="50sp"
+                android:textColorHint="#CE422B"
+                android:textColor="#CE422B"
+                android:id="@+id/garageDoor_editText"
+                android:inputType="number"
+                />
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/garage_door" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="9"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/garageDoor_Satchel"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/satchel_charge_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="4320"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/garageDoor_Satchel_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="6480"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/garageDoor_Satchel_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="3"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/garageDoor_Rocket"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/rocket_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="4200"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/garageDoor_Rocket_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="5850"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/garageDoor_Rocket_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="2"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/garageDoor_C4"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/c4_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="4400"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/garageDoor_C4_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="6000"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/garageDoor_C4_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:hint="1"
+                android:textSize="50sp"
+                android:textColorHint="#CE422B"
+                android:textColor="#CE422B"
+                android:id="@+id/stoneWall_editText"
+                android:inputType="number"
+                />
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/stone_wall_icon" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="10"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/stoneWall_Satchel"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/satchel_charge_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="4800"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/stoneWall_Satchel_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="7200"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/stoneWall_Satchel_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="4"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/stoneWall_Rocket"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/rocket_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="5600"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/stoneWall_Rocket_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="7800"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/stoneWall_Rocket_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="2"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/stoneWall_C4"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/c4_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="4400"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/stoneWall_C4_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="6000"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/stoneWall_C4_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:hint="1"
+                android:textSize="50sp"
+                android:textColorHint="#CE422B"
+                android:textColor="#CE422B"
+                android:id="@+id/sheetMetalWall_editText"
+                android:inputType="number"
+                />
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/sheet_metal_wall" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="23"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/sheetMetalWall_Satchel"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/satchel_charge_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="11040"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/sheetMetalWall_Satchel_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="16560"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/sheetMetalWall_Satchel_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="8"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/sheetMetalWall_Rocket"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/rocket_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="11200"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/sheetMetalWall_Rocket_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="15600"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/sheetMetalWall_Rocket_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="4"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/sheetMetalWall_C4"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/c4_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="8800"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/sheetMetalWall_C4_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="12000"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/sheetMetalWall_C4_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:hint="1"
+                android:textSize="50sp"
+                android:textColorHint="#CE422B"
+                android:textColor="#CE422B"
+                android:id="@+id/armoredWall_editText"
+                android:inputType="number"
+                />
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/armored_wall" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="46"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/armoredWall_Satchel"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/satchel_charge_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="22080"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/armoredWall_Satchel_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="33120"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/armoredWall_Satchel_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="15"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/armoredWall_Rocket"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/rocket_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="21000"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/armoredWall_Rocket_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="29250"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/armoredWall_Rocket_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="8"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/armoredWall_C4"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/c4_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="17600"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/armoredWall_C4_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="24000"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/armoredWall_C4_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:hint="1"
+                android:textSize="50sp"
+                android:textColorHint="#CE422B"
+                android:textColor="#CE422B"
+                android:id="@+id/highExtStone_editText"
+                android:inputType="number"
+                />
+
+
+            <ImageView
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/high_external_stone_wall" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="10"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/highExtStone_Satchel"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/satchel_charge_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="4800"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/highExtStone_Satchel_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="7200"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/highExtStone_Satchel_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="4"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/highExtStone_Rocket"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/rocket_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="5600"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/highExtStone_Rocket_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="7800"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/highExtStone_Rocket_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_marginTop="12dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center_vertical"
+                android:text="2"
+                android:textColor="#CE422B"
+                android:textSize="35sp"
+                android:id="@+id/highExtStone_C4"
+                />
+
+
+            <ImageView
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_marginLeft="0dp"
+                android:src="@drawable/c4_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="4400"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/highExtStone_C4_Sulfur"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/sulfur_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4dp"
+                android:gravity="center_vertical"
+                android:text="6000"
+                android:textColor="#CE422B"
+                android:textSize="20sp"
+                android:id="@+id/highExtStone_C4_Charcoal"
+                android:layout_marginTop="4dp"
+                />
+
+            <ImageView
+                android:layout_marginTop="12dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/charcoal_icon"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
